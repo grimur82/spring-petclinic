@@ -105,3 +105,5 @@ For pull requests, editor preferences are available in the [editor config](.edit
 
 This is a trivial change to demonstrate the functionality of Github's pull request capabilities.
 
+# Grimur Vid Neyst making changes
+Here are my changes.
