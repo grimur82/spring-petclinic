@@ -1,0 +1,5 @@
+projectKey=spring-petclinic
+serverUrl=http://localhost:9000
+dashboardUrl=http://localhost:9000/dashboard/index/spring-petclinic
+ceTaskId=AVpIbc8d8p4QhD2RQVNQ
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AVpIbc8d8p4QhD2RQVNQ
