@@ -33,12 +33,14 @@
     <cobertura.version>2.7</cobertura.version>
 
   </properties>
+  <!--
   <repositories>
 <repository>
 <id>nexus</id>
 <url>http://localhost:8081/repository/maven-public/</url>
 </repository>
 </repositories>
+-->
   <dependencies>
     <!-- Spring and Spring Boot dependencies -->
     <dependency>
@@ -61,10 +63,10 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-thymeleaf</artifactId>
       <exclusions>
-      	<exclusion>
-      		<groupId>org.codehaus.groovy</groupId>
-      		<artifactId>groovy</artifactId>
-      	</exclusion>
+        <exclusion>
+          <groupId>org.codehaus.groovy</groupId>
+          <artifactId>groovy</artifactId>
+        </exclusion>
       </exclusions>
     </dependency>
     <dependency>
@@ -179,6 +181,7 @@
 
       <!-- Spring Boot Actuator displays build-related information if a git.properties 
         file is present at the classpath -->
+      <!--
       <plugin>
         <groupId>pl.project13.maven</groupId>
         <artifactId>git-commit-id-plugin</artifactId>
@@ -197,7 +200,7 @@
           </generateGitPropertiesFilename>
         </configuration>
       </plugin>
-
+      -->
       <plugin>
         <groupId>ro.isdc.wro4j</groupId>
         <artifactId>wro4j-maven-plugin</artifactId>
@@ -238,6 +241,19 @@
 </execution>
 </executions>
 </plugin>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-dependency-plugin</artifactId>
+<version>2.4</version>
+<executions>
+<execution>
+<id>copy-dependencies</id>
+<phase>package</phase>
+<goals><goal>copy-dependencies</goal></goals>
+</execution>
+</executions>
+</plugin>
+
     </plugins>
   </build>
   <reporting>
